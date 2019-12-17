@@ -38,10 +38,9 @@ RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | \
     apt-get install -qqy --no-install-recommends \
       azure-cli \
 	  azure-functions-core-tools && \
-	rm -rf /var/lib/apt/lists/* 
-
-RUN apt-get update -qq && \
-    apt-get install apt-transport-https -qqy --no-install-recommends && \
-    apt-get update -qq && \
-    apt-get install dotnet-sdk-3.1 -qqy --no-install-recommends && \
-    apt-get install aspnetcore-runtime-3.1 -qqy --no-install-recommends
+	rm -rf /var/lib/apt/lists/* && \
+  apt-get install apt-transport-https -qqy --no-install-recommends && \
+  apt-get update -qq && \
+  apt-get install dotnet-sdk-3.1 -qqy --no-install-recommends && \
+  apt-get install aspnetcore-runtime-3.1 -qqy --no-install-recommends
+  
