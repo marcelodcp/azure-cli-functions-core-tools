@@ -19,7 +19,8 @@ RUN apt-get update -qq && \
       rlwrap \
       vim \
       nano \
-      jq && \
+      jq \
+      zip && \
     rm -rf /var/lib/apt/lists/* && \
     curl https://deb.nodesource.com/${NODEJS_APT_ROOT}/pool/main/n/nodejs/nodejs_${NODEJS_VERSION}-1nodesource1_amd64.deb > node.deb && \
 	dpkg -i node.deb && \
