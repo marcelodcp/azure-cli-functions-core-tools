@@ -4,6 +4,8 @@ RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV NODEJS_APT_ROOT "node_12.x"
 ENV NODEJS_VERSION "12.13.0"
+ENV LANG C.UTF-8
+ENV LC_ALL C.UTF-8
 
 RUN apt-get update -qq && apt-get install -y --no-install-recommends apt-utils
 
